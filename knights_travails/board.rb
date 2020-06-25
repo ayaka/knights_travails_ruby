@@ -50,18 +50,6 @@ class Board
     end
   end
 
-  # def link_squares(n)
-  #   0.upto(n - 1) do |y|
-  #     0.upto(n - 1) do |x|
-  #       square = square(x, y)
-  #       square.up = [x, y + 1] unless off_board?(y + 1) 
-  #       square.right = [x + 1, y] unless off_board?(x + 1)
-  #       square.down = [x, y - 1] unless off_board?(y - 1)
-  #       square.left = square(x - 1, y) unless off_board?(x - 1)
-  #     end
-  #   end
-  # end
-
   def backtrack_knights_path(departure, current, path = [])
     until current.position == departure
       path.unshift(current.position)
